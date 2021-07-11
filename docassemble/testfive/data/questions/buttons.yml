@@ -1,0 +1,30 @@
+question: |
+  What is the most important question
+  to ask?
+field: interrogatory
+buttons:
+  - "When?": when
+    image: adjust
+  - "Where?": where
+    image: award
+  - "Next": keep_going
+under: |
+  ${ action_button_html(url_action('nav_finished'), label="Continue", color="primary", size="md") }
+---    
+image sets:
+  freepik:
+    attribution: |
+      Icon made by [Freepik](http://www.flaticon.com/authors/freepik)
+    images:
+      calendar: calendar146.svg
+      map: map32.svg
+---
+question: |
+  In that case, ${ interrogatory }
+  were you born?
+fields:
+  - no label: target_variable
+---
+question: |
+  You were born in ${ target_variable }.
+mandatory: True
